@@ -1,0 +1,10 @@
+if [ -f ~/.bash_aliases ]; then
+	. ~/.bash_aliases
+fi
+
+if [ -f ~/.bashrc_custom ]; then
+	. ~/.bashrc_custom ]
+fi
+
+### Added by te Heroku Toolbelt
+export PATH="usr/local/heroku/bin:$PATH"
