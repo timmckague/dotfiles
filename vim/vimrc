@@ -7,8 +7,9 @@ call pathogen#helptags()
 "source ~/.vim/bundle/closetag/plugin/closetag.vim
 
 set tabstop=2
-set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
-set list
+"set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+"set list
+set nu
 "Solarized 
 syntax on
 set background=dark
