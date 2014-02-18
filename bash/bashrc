@@ -99,8 +99,12 @@ if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-if [ -f ~/.bash_path ]; then
-    . ~/.bash_path
+if [ -f ~/dotfiles/bash/bash_path ]; then
+    . ~/dotfiles/bash/bash_path
+fi
+
+if [ -f ~/dotfiles/bash/custom_aliases ]; then
+		. ~/dotfiles/bash/custom_aliases
 fi
 
 # enable programmable completion features (you don't need to enable
