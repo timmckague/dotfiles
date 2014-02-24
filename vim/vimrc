@@ -11,10 +11,11 @@ set tabstop=2
 "set list
 set nu
 "Solarized 
+set t_Co=256
 syntax on
 set background=dark
-let g:solarized_termtrans=1
-let g:solarized_termcolors=256
-let g:solarized_contrast="high"
-let g:solarized_visibility="high"
+"let g:solarized_termtrans=1
+"let g:solarized_termcolors=256
+"let g:solarized_contrast="high"
+"let g:solarized_visibility="high"
 colorscheme solarized
