@@ -28,17 +28,17 @@ makes bashrc work when in using screen although this could use some work...
 
 
 ##Setup##
-git clone https://github.com/timmckague/dotfiles.git
-mkdir old\_dotfiles
-mv .bash\* old\_dotfiles/
+git clone https://github.com/timmckague/dotfiles.git  
+mkdir old\_dotfiles  
+mv .bash\* old\_dotfiles/  
 
-ln -s dotfiles/bash/bashrc .bashrc
-ln -s dotfiles/bash/bash\_profile .bash\_profile
-ln -s dotfiles/tmux/tmux.conf .tmux.conf
-ln -s dotfiles/vim/vimrc .vimrc
-ln -s dotfiles/vim .vim
+ln -s dotfiles/bash/bashrc .bashrc  
+ln -s dotfiles/bash/bash\_profile .bash\_profile  
+ln -s dotfiles/tmux/tmux.conf .tmux.conf  
+ln -s dotfiles/vim/vimrc .vimrc  
+ln -s dotfiles/vim .vim  
 
-cd dotfiles
-git submodule init && git submodule update
+cd dotfiles  
+git submodule init && git submodule update  
 
 
