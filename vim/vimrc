@@ -7,6 +7,7 @@ call pathogen#helptags()
 "source ~/.vim/bundle/closetag/plugin/closetag.vim
 
 set tabstop=2
+set sw=2
 "set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 "set list
 set nu
@@ -19,3 +20,7 @@ set background=dark
 "let g:solarized_contrast="high"
 "let g:solarized_visibility="high"
 colorscheme solarized
+
+
+set encoding=utf-8 "Encoding displayed
+set fileencoding=utf-8 " The encoding written to file

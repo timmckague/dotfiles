@@ -1,6 +1,45 @@
+# http://www.cyberciti.biz/tips/bash-aliases-mac-centos-linux-unix.html
+
+
 #some ls aliases
-alias ll='ls -alF'
-alias la='ls -A'
-alias l='ls -CF'
+alias l='ls -lhGF'
+alias la='ls -AGF'
+alias ls='ls -CFG'
+
+alias ecm='/./Users/timckag/scripts/bash/mount_eComm.sh'
 
 alias ..='cd ..'
+alias ...='cd ../../../'
+alias ....='cd ../../../../'
+alias .....='cd ../../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+
+# start calculator with math support
+alias bc='bc -l'
+
+alias mkdir='mkdir -pv'
+
+# Stop after sending count ECHO_REQUEST packets #
+alias ping='ping -c 5'
+# Do not wait interval 1 second, go fast #
+alias fastping='ping -c 100 -s.2'
+
+
+alias ports='netstat -tulanp'
+
+
+alias path='echo -e ${PATH//:/\\n}'
+alias now='date +"%T'
+alias nowtime=now
+alias nowdate='date +"%d-%m-%Y"'
+
+# handy short cuts #
+alias h='history'
+alias j='jobs -l'
+
+
+alias mount='mount |column -t'
+
+# install  colordiff package :)
+# alias diff='colordiff'
