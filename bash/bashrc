@@ -6,7 +6,9 @@
 export WORKON_HOME=~/Envs
 source /usr/local/bin/virtualenvwrapper.sh
 
-
+# for replacing ^M in csv files
+#export LC_CTYPE=C 
+#export LANG=C
 
 # If not running interactively, don't do anything
 [ -z "$PS1" ] && return
@@ -89,7 +91,7 @@ if [ -x /usr/bin/dircolors ]; then
 		
 fi
 		
-		export GREP_OPTIONS='--color=always'
+		export GREP_OPTIONS='--color=auto'
 		export GREP_COLOR='1;35;40'
 
 # Add an "alert" alias for long running commands.  Use like so:

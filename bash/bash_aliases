@@ -6,7 +6,13 @@ alias l='ls -lhGF'
 alias la='ls -AGF'
 alias ls='ls -CFG'
 
+#application shortcuts
+alias sublime='open -a Sublime\ Text\ 2'
+alias chrome='open -a Google\ Chrome'
+alias excel='open -a /Applications/Microsoft\ Office\ 2011/Microsoft\ Excel.app'
 alias ecm='/./Users/timckag/scripts/bash/mount_eComm.sh'
+
+alias hq='python ~/Documents/workspace/hybrisQuery/hybris_query.py'
 
 alias ..='cd ..'
 alias ...='cd ../../../'

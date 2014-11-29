@@ -8,6 +8,7 @@ call pathogen#helptags()
 
 set tabstop=2
 set sw=2
+set backspace=indent,eol,start
 "set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 "set list
 set nu
