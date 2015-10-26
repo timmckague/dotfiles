@@ -6,8 +6,29 @@ call pathogen#helptags()
 "autocmd FileType html,xhtml,xml,htmldjango,jinjahtml,eruby,mako 
 "source ~/.vim/bundle/closetag/plugin/closetag.vim
 
-set tabstop=2
-set sw=2
+"for ctrlp
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+let g:ctrlp_match_window = 'bottom,order:ttb'
+let g:ctrlp_switch_buffer = 0
+let g:ctrlp_working_path_mode = 0
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+let g:ctrlp_working_path_mode = 'ra'
+
+
+filetype plugin indent on
+"set textwidth=79  " lines longer than 79 columns will be broken
+"set shiftwidth=4  " operation >> indents 4 columns; << unindents 4 columns
+"set tabstop=4     " a hard TAB displays as 4 columns
+"set expandtab     " insert spaces when hitting TABs
+"set softtabstop=4 " insert/delete 4 spaces when hitting a TAB/BACKSPACE
+"set shiftround    " round indent to multiple of 'shiftwidth'
+"set autoindent     align the new line indent with the previous line"
+
+autocmd FileType html :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
+autocmd FileType javascript :setlocal sw=2 ts=2 sts=2 " Two spaces for HTML files
+
+"set sw=2
 set backspace=indent,eol,start
 "set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 "set list
@@ -16,12 +37,23 @@ set nu
 set t_Co=256
 syntax on
 set background=dark
-"let g:solarized_termtrans=1
-"let g:solarized_termcolors=256
-"let g:solarized_contrast="high"
-"let g:solarized_visibility="high"
 colorscheme solarized
 
 
 set encoding=utf-8 "Encoding displayed
 set fileencoding=utf-8 " The encoding written to file
+
+
+" The Silver Searcher
+" https://robots.thoughtbot.com/faster-grepping-in-vim
+if executable('ag')
+  " Use ag over grep
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  " Use ag in CtrlP for listing files. Lightning fast and respects
+  "  .gitignore"
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+
+  " ag is fast enough that CtrlP doesn't need to cache
+  let g:ctrlp_use_caching = 0
+endif
